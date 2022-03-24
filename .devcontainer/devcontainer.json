@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.177.0/containers/python-3
+{
+  "name": "golang-app",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/opt/yijunx/code",
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "bin/bash"
+      }
+    },
+    "go.useLanguageServer": true
+  },
+
+  "extensions": [
+    "ms-vscode.go",
+    "davidanson.vscode-markdownlint",
+    "shardulm94.trailing-spaces",
+    "IBM.output-colorizer"
+  ],
+  // "postCreateCommand": "go mod download",
+
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "yijunx"
+}
